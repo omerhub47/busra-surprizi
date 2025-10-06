@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Büşra'ya Mimarlık Günü Sürprizi</title>
+<style>
+  body {
+    background: linear-gradient(135deg, #0b1d2a, #020a12);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .letters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .letter {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .letter:hover {
+    transform: scale(1.2);
+    background: rgba(255,255,255,0.3);
+  }
+  .meaning {
+    display: none;
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+  button {
+    margin-top: 25px;
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #4682b4;
+  }
+</style>
+</head>
+<body>
+
+<h1>Büşra’ya Özel — Dünya Mimarlık Günü 💫</h1>
+
+<div class="letters">
+  <div class="letter" onclick="showMeaning('b')">B</div>
+  <div class="letter" onclick="showMeaning('ü')">Ü</div>
+  <div class="letter" onclick="showMeaning('ş')">Ş</div>
+  <div class="letter" onclick="showMeaning('r')">R</div>
+  <div class="letter" onclick="showMeaning('a')">A</div>
+</div>
+
+<div class="meaning" id="b">Bakışların, çizgilerin arasında kaybolan bir ilham gibi…</div>
+<div class="meaning" id="ü">Üzerine düşen her fikir, bir yapının değil bir hayalin temeli gibi…</div>
+<div class="meaning" id="ş">Şekil verdiğin her detayda, iç dünyandaki sessiz zarafetin yankısı var.</div>
+<div class="meaning" id="r">Rüzgâr bile geçerken iz bırakıyor senin hayalinden doğan şehirlerde.</div>
+<div class="meaning" id="a">Adın gibi anlamlı, çizimlerin gibi özgün bir dünyan olsun.</div>
+
+<button onclick="startMusic()">🎵 Başlat</button>
+<button onclick="window.location.href='https://instagram.com/gunenc_omerr'">💬 Cevapla</button>
+
+<iframe id="music" width="0" height="0" src="https://www.youtube.com/embed/hN5X4kGhAtU?autoplay=1&controls=0" frameborder="0" allow="autoplay"></iframe>
+
+<script>
+let started = false;
+function showMeaning(letter) {
+  document.querySelectorAll(".meaning").forEach(el => el.style.display = "none");
+  document.getElementById(letter).style.display = "block";
+}
+
+function startMusic() {
+  if (!started) {
+    const iframe = document.getElementById("music");
+    iframe.style.display = "block";
+    started = true;
+  }
+}
+</script>
+
+</body>
+</html>
